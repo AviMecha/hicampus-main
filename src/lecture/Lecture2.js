@@ -16,22 +16,31 @@ const Lecture2 = () => {
     }
 
     const computerAbility = useHistory();
-    function handleComAbil() {
+    function handleComAbt() {
         computerAbility.push('/Lecture3')
+    }
+
+    const lectureApply = useHistory();
+    function handleApply() {
+        lectureApply.push('/Apply')
+        
     }
 
 
 
     return (
         <>
-        <div class="d-flex" id="wrapper">
+        <div className="d-flex" id="wrapper">
             {/* <!-- Sidebar--> */}
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">강의소개</div>
-                <div class="list-group list-group-flush">
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComDev}>웹 개발자 과정</button>
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComTax}>전산 세무 과정</button>
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComAbil}>컴퓨터 활용능력 과정</button>
+            <div className="border-end bg-white" id="sidebar-wrapper">
+                <div className="sidebar-heading border-bottom bg-light">강의소개</div>
+                <div className="list-group list-group-flush">
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComDev}>웹 개발자 과정</button>
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComTax}>전산 세무 과정</button>
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComAbt}>컴퓨터 활용능력 과정</button>
                 </div>
             </div>
 
@@ -39,24 +48,26 @@ const Lecture2 = () => {
             <div id="page-content-wrapper">
  
             {/* <!-- Top navigation--> */}
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">수강신청하기</button>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div className="container-fluid">
+                        <button className="btn btn-primary" id="sidebarToggle" 
+                            onClick={handleApply}>수강신청하기</button>
                     </div>
                 </nav>
                 {/* <!-- Page content--> */}
-                <div class="container-fluid">
-                    <h1 class="mt-4">강사소개</h1>
+                <div className="container-fluid">
+                    <h1 className="mt-4">강사소개</h1>
                     <img src="https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/784/c7a72c47fb8f79d85e66c1c9ad4cc877_res.jpeg"
-                    alt="주방장스폰지밥" width="400" htight="400" align="center" border="0"></img>
+                    alt="전설" width="400" htight="400" align="center" border="0"></img>
                     <p>Yeap Buddy!! 전산 쎄무 존나 easy Bro Man</p>
                     <p>
                         Right Weight BABY!! 유 캔 두잇 Bro
                     </p>
                 </div>
 
-                <div class="container-fluid">
-                    <button class="btn bottom-primary" id="sidebarToggle">수강신청하기</button>
+                <div className="container-fluid">
+                    <button className="btn bottom-primary" id="sidebarToggle" 
+                        onClick={handleApply}>수강신청하기</button>
                 </div>
 
             </div>

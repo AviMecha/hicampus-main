@@ -11,7 +11,7 @@ function Menu() {
       <>
         <div className='top'><Link to="/doit">DO IT</Link>
           <ul className='menuList'>
-            <li className='menu'><NavLink activeStyle={activeStyle} to="/Lecture1">수강신청</NavLink></li>
+            <li className='menu'><NavLink activeStyle={activeStyle} to="/lecture/Lecture1">수강신청</NavLink></li>
             <li className='menu'><NavLink activeStyle={activeStyle} to="/login">로그인</NavLink></li>
             <li className='menu'><NavLink activeStyle={activeStyle} to="/board">게시판</NavLink></li>
             <li className='menu'><NavLink activeStyle={activeStyle} to="/mypage">마이페이지</NavLink></li>

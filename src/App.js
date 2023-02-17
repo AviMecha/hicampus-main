@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Board from './board/Board';
 import Bottom from './bottom/Bottom';
 import Login from './login/LogIn';
@@ -13,7 +13,9 @@ import Lecture3 from './lecture/Lecture3';
 import Apply from './lecture/Apply';
 import AdminPage from './myPage/AdminPage';
 
+
 function App() {
+
   return (
    <>
     <header>
@@ -21,10 +23,10 @@ function App() {
     </header>
     
     <section>
-      <Route path="/Lecture1" component={Lecture1} />
-      <Route path="/Lecture2" component={Lecture2} />
-      <Route path="/Lecture3" component={Lecture3} />
-      <Route path="/Apply" component={Apply}/>
+      <Route path="/lecture/Lecture1" component={Lecture1} />
+      <Route path="/lecture/Lecture2" component={Lecture2} />
+      <Route path="/lecture/Lecture3" component={Lecture3} />
+      <Route path="/lecture/Apply" component={Apply} />
       <Route path="/login" component={Login} />
       <Route path="/board" component={Board} />
       <Route path="/mypage" component={MyPage} />

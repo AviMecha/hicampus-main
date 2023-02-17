@@ -16,22 +16,30 @@ const Lecture3 = () => {
     }
 
     const computerAbility = useHistory();
-    function handleComAbil() {
+    function handleComAbt() {
         computerAbility.push('/Lecture3')
     }
 
+    const lectureApply = useHistory();
+    function handleApply() {
+        lectureApply.push('/Apply')
+        
+    }
 
 
     return (
         <>
-        <div class="d-flex" id="wrapper">
+        <div className="d-flex" id="wrapper">
             {/* <!-- Sidebar--> */}
-            <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">강의소개</div>
-                <div class="list-group list-group-flush">
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComDev}>웹 개발자 과정</button>
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComTax}>전산 세무 과정</button>
-                    <button class="list-group-item list-group-item-action list-group-item-light p-3" onClick={handleComAbil}>컴퓨터 활용능력 과정</button>
+            <div className="border-end bg-white" id="sidebar-wrapper">
+                <div className="sidebar-heading border-bottom bg-light">강의소개</div>
+                <div className="list-group list-group-flush">
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComDev}>웹 개발자 과정</button>
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComTax}>전산 세무 과정</button>
+                    <button className="list-group-item list-group-item-action list-group-item-light p-3" 
+                        onClick={handleComAbt}>컴퓨터 활용능력 과정</button>
                 </div>
             </div>
 
@@ -39,24 +47,26 @@ const Lecture3 = () => {
             <div id="page-content-wrapper">
  
             {/* <!-- Top navigation--> */}
-                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                    <div class="container-fluid">
-                        <button class="btn btn-primary" id="sidebarToggle">수강신청하기</button>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div className="container-fluid">
+                        <button className="btn btn-primary" id="sidebarToggle" 
+                            onClick={handleApply}>수강신청하기</button>
                     </div>
                 </nav>
                 {/* <!-- Page content--> */}
-                <div class="container-fluid">
-                    <h1 class="mt-4">강사소개</h1>
+                <div className="container-fluid">
+                    <h1 className="mt-4">강사소개</h1>
                     <img src="https://cdnweb01.wikitree.co.kr/webdata/editor/202006/11/img_20200611165120_90eb2298.webp"
-                    alt="주방장스폰지밥" width="400" htight="400" align="center" border="0"></img>
+                    alt="빡빡이아저씨" width="400" htight="400" align="center" border="0"></img>
                     <p>전직 UDT 출신의 컴퓨터활용능력 명품강의!!</p>
                     <p>
                         Wow!! 친구들 빢빢이 아저씨야 오늘은 컴활에 대해 알아보자고
                     </p>
                 </div>
 
-                <div class="container-fluid">
-                    <button class="btn bottom-primary" id="sidebarToggle">수강신청하기</button>
+                <div className="container-fluid">
+                    <button className="btn bottom-primary" id="sidebarToggle" 
+                        onClick={handleApply}>수강신청하기</button>
                 </div>
 
             </div>
